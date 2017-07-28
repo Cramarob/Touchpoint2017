@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+	<title>Touchpoint - Co-design Experiments - Leftloft</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Touchpoint - Co-design Experiments" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://touchpointdesign.org/index.html" />
+	<meta property="og:image" content="http://touchpointdesign.org/img/touchpoint.png" />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@Leftloft">
+	<meta name="twitter:title" content="Touchpoint - Co-design Experiments">
+	<meta name="twitter:creator" content="@Leftloft">
+	<meta name="twitter:image" content="http://touchpointdesign.org/img/touchpoint.png">
+
+
+
+
+	<link rel="image_src" href="http://touchpointdesign.org/img/touchpoint.png"/>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/script.js"></script>
+
+	<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '905603726233487');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=905603726233487&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+
+	<script>
+		$(document).ready(function() {
+
+			$('.touchpoint-link').click( function(){
+				$('#touchpoint').toggle();
+			});
+			$('.touchpoint-link2').click( function(){
+				$('#touchpoint2').toggle();
+			});
+			$('.touchpoint-link3').click( function(){
+				$('#touchpoint3').toggle();
+			});
+			$('.toggle').click( function(){
+				$('.navigation').toggleClass("open");
+				$('body').toggleClass("overscroll");
+			});
+
+			function headerscroll() {
+				$(function(){
+						var scroll = $(document).scrollTop();
+						var introHeight = $('#home').outerHeight() + 160;
+						$(window).scroll(function() {
+								var scrolled = $(document).scrollTop();
+								if (scrolled > introHeight){
+										$('.logo').css({'display':'block'});
+										$('header').css({'background-color':'#FFF'});
+								} else {
+									$('.logo').css({'display':'none'});
+									$('header').css({'background-color':'transparent'});
+								}
+								scroll = $(document).scrollTop();
+						});
+				});
+			}
+			headerscroll();
+
+			if ($(window).width() <= 768) {
+				$('a[href^="#"]').click(function(e) {
+					$('.navigation').removeClass("open");
+					$('body').removeClass("overscroll");
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top-48}, 500, function() {
+					});
+					return false;
+					e.preventDefault();
+				});
+			} else {
+				$('a[href^="#"]').click(function(e) {
+					$('html,body').animate({ scrollTop: $(this.hash).offset().top-80}, 500, function() {
+					});
+					return false;
+					e.preventDefault();
+				});
+			}
+
+		});
+
+
+      $(document).ready(function(){
+        $( '#ws1' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws2').css('z-index','2');
+          $('#ws3').css('z-index','2');
+          $('#ws4').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+        $( '#ws2' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws1').css('z-index','2');
+          $('#ws3').css('z-index','2');
+          $('#ws4').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+        $( '#ws3' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws1').css('z-index','2');
+          $('#ws2').css('z-index','2');
+          $('#ws4').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+        $( '#ws4' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws1').css('z-index','2');
+          $('#ws2').css('z-index','2');
+          $('#ws3').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+          $( '#ws5' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws6').css('z-index','2');
+          $('#ws7').css('z-index','2');
+          $('#ws8').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+          $( '#ws6' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws5').css('z-index','2');
+          $('#ws7').css('z-index','2');
+          $('#ws8').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+          $( '#ws7' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws5').css('z-index','2');
+          $('#ws6').css('z-index','2');
+          $('#ws8').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+          $( '#ws8' ).mousedown( function() {
+          $(this).css('z-index','6');
+          $('#ws5').css('z-index','2');
+          $('#ws6').css('z-index','2');
+          $('#ws7').css('z-index','2');
+          $('#text-wrapper').css('z-index','1');
+          $('#full-wrapper').css('z-index','1');
+        });
+        $('.text-wrapper').click(function(){
+          $(this).css({'position':'relative' , 'z-index' : '5'});
+        })
+      });
+    </script>
+
+
+
+	<header id="header">
+		<div class="logo">
+			<a href="#home">Touchpoint</a>
+		</div>
+		<div class="toggle">
+			menu
+		</div>
+		<div class="navigation">
+			<nav>
+				<ul>
+					<li>
+						<a href="#about">Progetto</a>
+					</li>
+					<li>
+						<a href="#guests">Ospiti</a>
+					</li>
+					<li>
+						<a href="#workshop">Laboratori</a>
+					</li>
+					<li>
+						<a href="#talk">Conversazioni</a>
+					</li>
+					<li>
+						<a href="#marathon">Design Marathon</a>
+					</li>
+					<li>
+						<a <a href="#info">Contatti</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="home" class="clearfix">
+
+<!-- 		video -->
+
+
+			<a href="#marathon"><video autoplay loop muted poster="videoframe.jpg" id="bgvid">
+		        <source src="img/TPvideo4.mp4" type="video/mp4" />
+		        <source src="img/TPvideo4.webm" type="video/webm" />
+			</video></a>
+	
+			
+ 				<a href="#marathon"><div class="big-logo"></div></a>
+
+<!-- 		fine video -->
+
+<!-- 		<div class="full-wrapper">
+			<h1>Co-Design Experiments</h1>
+		</div> -->
+
+	</section>
+
+	<section id="quote-home" class="brown">
+		<div class="small-wrapper">
+			<h2>Hell is a place where nothing connects with nothing.</h2>
+			<h6 class="half-top">&mdash; T.S. Eliot</h6>
+		</div>
+	</section>
+
+	<section id="about">
+		<h5 class="section-title">Progetto</h5>
+		<div class="text-wrapper">
+			<h4>
+				<span>La grafica è dappertutto, e nella società dell’immagine l’aspetto visuale è sempre più rilevante per capire il mondo, connettere comunità e abilitare comunicazioni e relazioni. Il design è ormai pratica partecipata, non incorona vincenti i talenti individuali, ma figure ibride e collettive, aperte alla contaminazione e alla co-progettazione.</span> <span class="touchpoint-link"><u>Touchpoint</u></span> <span id="touchpoint">[1] A point of contact or interaction, especially between a business and its customers or consumers; [2] A point of reference; [3] A touch-sensitive area on an electronic device [from the Oxford Dictionary]</span> è un esperimento sulla comunicazione aperto a designer, pensatori, creativi, filosofi, studenti, scienziati e curiosi. Da maggio a settembre dà vita a laboratori, conversazioni e a una maratona dedicata al design e alla comunicazione. <span class="touchpoint-link2"><u>Touchpoint</u></span> <span id="touchpoint2">[1] A point of contact or interaction, especially between a business and its customers or consumers; [2] A point of reference; [3] A touch-sensitive area on an electronic device [from the Oxford Dictionary]</span><span> vuol farsi punto d’incontro fra il design e il suo pubblico, tra consumatori e aziende, imprese e cittadini, designer e progettisti di altre discipline. </span><span class="touchpoint-link3"><u>Touchpoint</u></span> <span id="touchpoint3">[1] A point of contact or interaction, especially between a business and its customers or consumers; [2] A point of reference; [3] A touch-sensitive area on an electronic device [from the Oxford Dictionary]</span><span> vuole capire come cambia oggi il lavoro creativo.</span>
+			</h4>
+		</div>
+	</section>
+
+	<section id="guests">
+		<h5 class="section-title">Ospiti</h5>
+		<div class="full-wrapper">
+			<h3><a href="Area17.html">Area 17</a>, <a href="BaseDesign.html">Base Design</a>, <a href="#">Roberto Bagatti</a>, <a href="Confalonieri.html">Cristian Confalonieri</a>, <a href="EdoardoBoncinelli.html">Edoardo Boncinelli</a>, <a href="http://rejanedalbello.com" target="_blank">Rejane Dal Bello</a>, <a href="PascalDaylight.html">Daylight Design</a>, <a href="FF3300.html">FF3300</a>, <a href="Fioravanti.html">Odoardo Fioravanti</a>, <a href="PaoloIabichino.html" >Paolo Iabichino</a>, <a href="LavaDesign.html">Lava Design</a>, <a href="http://leftloft.com">Leftloft</a>, <a href="http://mind-lab.dk/en/">Mindlab</a>, <a href="CarolynChristovBakargiev.html">Carolyn Christov-Bakargiev</a>, <a href="StefanoMaffei.html">Stefano Maffei</a>, <a href="JustusOehler.html">Pentagram</a>, <a href="nous.html">n-o-u-s</a>, <a href="Raffinerie.html">Raffinerie</a>, <a href="StefanoQuintarelli.html">Stefano Quintarelli</a>,<a href="LuigiSpinola.html"> Luigi Spinola</a>, <a href="AstridStavro.html">Astrid Stavro</a>, <a href="Dumbar.html">Studio Dumbar</a>, <a href="FrancescoValtolina.html">Francesco Valtolina</a> e tanti altri.</h3>
+		</div>
+	</section>
+
+	<section id="workshop" class="brown">
+		<!-- <img src="img/_DSC4512.jpg"> -->
+			<div class="wscontainer">
+				<img id="ws1" class="wsphoto" src="img/_DSC4512.jpg" draggable="false">
+				<img id="ws2" class="wsphoto" src="img/IMG_9524.JPG" draggable="false">
+				<img id="ws3" class="wsphoto" src="img/giugno1.jpg" draggable="false">
+				<img id="ws4" class="wsphoto" src="img/giugno2.jpg" draggable="false">
+				<img id="ws5" class="wsphoto" src="img/_DSC4461.jpg" draggable="false">
+				<img id="ws6" class="wsphoto" src="img/_DSC4478.jpg" draggable="false">
+				<img id="ws7" class="wsphoto" src="img/zip.jpg" draggable="false">
+				<img id="ws8" class="wsphoto" src="img/IMG_9535.JPG" draggable="false">
+			</div>
+		<h5 class="section-title">Laboratori</h5>
+		<div class="text-wrapper">
+			<h4>Studi Pop-up, codiretti da un designer e un intellettuale, popolati di giovani con competenze ibride di design, arte, informatica, marketing, filosofia, scrittura. Mescolano designer e professionisti di vari campi del sapere, per lavorare insieme alla generazione di concept, spingendoli a osservare la progettazione da un punto di vista contemporaneo, interdisciplinare e interconnesso per creare idee nuove.</h4>
+		</div>
+		<div class="full-wrapper top">
+<!-- 			<div class="one-fourth">
+				<div class="padder">
+					<h4>13/14/15 mag</h4>
+					<h3><b>I</b></h3>
+					<p>Communication</p>
+					<p><a href="http://www.leftloft.com" target="_blank"><b>Leftloft</b></a></p>
+				</div>
+			</div> -->
+			<div class="one-fifth">
+				<div id="off" class="padder">
+					<h4>24/25/26 giu</h4>
+					<h3><b>I</b></h3>
+					<p>Branding</p>
+					<p><a href="Dumbar.html" target="_blank"><b>Liza Enebeis e Maartje Wensing</b></a> [Studio Dumbar]</p>
+					<p><a href="LuigiSpinola.html"><b>Luigi Spinola</b></a> [Pagina 99]</p>
+				</div>
+			</div>
+			<div class="one-fifth">
+				<div id="off" class="padder">
+					<h4>24/25/26 giu</h4>
+					<h3><b>II</b></h3>
+					<p>Service design</p>
+					<p><a href="PascalDaylight.html"target="_blank"><b>Pascal Soboll</b></a> [Daylight Design]</p>
+					<p><a href="CarolynChristovBakargiev.html" target="_blank"><b>Carolyn Christov-Bakargiev</b></a> [GAM Torino, Castello di Rivoli]</p>
+				</div>
+			</div>
+			<div class="one-fifth">
+				<div id="off" class="padder">
+					<h4>15/16/17 lug</h4>
+					<h3><b>III</b></h3>
+					<p>Digital</p>
+					<p><a href="Area17.html"><b>George Eid e David Lamothe</b></a> [Area 17]<br><a href="StefanoQuintarelli.html"><b>Stefano Quintarelli</b></a></p>
+				</div>
+			</div>
+			<div class="one-fifth">
+				<div class="padder">
+					<h4>24/25 set</h4>
+					<h3><b>IV</b></h3>
+					<p>Design della comunicazione</p>
+					<p><a href="http://leftloft.com" target="_blank"><b>Leftloft</b></a></p>
+				</div>
+			</div>
+			<div class="one-fifth">
+				<div class="padder">
+					<h4>24/25 set</h4>
+					<h3><b>V</b></h3>
+					<p>Innovazione sociale</p>
+					<p><a href="http://mind-lab.dk/en/"><b>MindLab + Jotte De Koning</b></a></p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</section>
+
+	<section id="join">
+		<h5 class="section-title">Partecipa ai laboratori</h5>
+		<div class="text-wrapper">
+			<h4>
+				Le selezioni sono scadute il 18 settembre
+			</h4>
+		</div>
+	</section>
+
+	<section id="talk" class="brown">
+		<h5 class="section-title">Conversazioni</h5>
+		<div class="text-wrapper">
+			<h4>
+				Una riflessione condivisa su metodi, visioni e prospettive del design e della creatività internazionale nel tempo della società dell’immagine.
+			</h4>
+		</div>
+		<div class="full-wrapper top">
+			<div style="text-decoration: line-through" class="one-third">
+				<h4>15 maggio, 17:00<br><br></h4>
+				<p><a href="EdoardoBoncinelli.html"><b>Edoardo Boncinelli</b></a> [Università Vita-Salute San Raffaele]<br><a href="Leftloft.html"><b>Francesco Cavalli</b></a> [Leftloft]<br><a href="PaoloIabichino.html"><b>Paolo Iabichino</b></a> [Group Ogilvy & Mather Italy]<br><a href="JustusOehler.html"><b>Justus Oehler</b></a> [Pentagram]<br>Coordina <b>Silvia Botti</b> [Direttore di Abitare]</p>
+			</div>
+			<div style="text-decoration: line-through" class="one-third">
+				<h4>26 giugno, 17:00<br><br></h4>
+				<p><a href="Dumbar.html"><b>Liza Enebeis e Maartje Wensing</b></a> [Studio Dumbar]<br><a href="PascalDaylight.html"><b>Pascal Soboll</b></a> [Daylight Design]<br><a href="LuigiSpinola.html"><b>Luigi Spinola</b></a> [Pagina 99]<br>Coordina <b>Gianluigi Ricuperati</b> [Doums Academy]</p>
+			</div>
+			<div style="text-decoration: line-through" class="one-third">
+				<h4>17 luglio, 17:00<br><br></h4>
+				<p><a href="Area17.html"><b>George Eid e David Lamothe</b></a> [Area 17]<br><a href="Raffinerie.html"><b>Christian Haas</b></a> [Raffinerie]<br><a href="AstridStavro.html"><b>Astrid Stavro</b></a> [Atlas]<br><br><a href="https://www.eventbrite.it/e/biglietti-touchpoint-conversazione-3-refreshing-design-26376314266" target="_blank">registrati qui</a></p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="small-wrapper">
+			<h6 class="top">Triennale di Milano - Salone d'Onore<br>A seguire Dj Set e aperitivo in terrazza<br>ingresso libero</h6>
+		</div>
+	</section>
+
+	<section id="marathon" class="brown">
+		<h5 class="section-title">Design Marathon</h5>
+		<div class="text-wrapper">
+			<h4>
+				<b>10 settembre</b> Un’intera giornata dedicata a ridefinire gli obiettivi, gli strumenti e le prospettive del design; a immaginarne il futuro e a tracciarne nuovi confini e prospettive, coinvolgendo protagonisti, studiosi e influencer di questa disciplina di fronte a un pubblico eterogeneo. <br><br>Tra gli ospiti: <a href="BaseDesign.html">Fabian Jean Villanueva e Thierry Brunfaut [Base Design]</a>, Roberto Bagatti, <a href="FF3300.html">FF3300</a>, <a href="LavaDesign.html">Hans Wolbers [Lava Design]</a>, <a href="StefanoMaffei.html">Stefano Maffei</a>, <a href="nous.html">n-o-u-s</a></a>
+			</h4>
+		</div>
+		<div class="small-wrapper">
+		</div>
+	</section>
+
+	<section id="info">
+		<div class="text-wrapper">
+			<h6>
+				Touchpoint è un progetto di <a href="http://www.leftloft.com/"><u>Leftloft</u></a> realizzato per la XXI Triennale.<br><br>Seguici su <a href="https://www.facebook.com/leftloft" target="_blank">Facebook</a> e <a href="https://twitter.com/leftloft" target="_blank">Twitter</a><br>Contatti: <a href="mailto:info@touchpointdesign.org">info@touchpointdesign.org</a><br>Ufficio stampa: Maddalena Bonicelli - <a href="mailto:press@leftloft.com">press@leftloft.com</a> - 335.6857707
+			</h6>
+		</div>
+		<img class="top" src="img/sfondo3.png" style="width:100%">
+	</section>
+
+
+<!-- footer -->
+
+	<footer id="colophon" class="brown">
+		<div>
+			<div class="partners_tech">
+					<div class="float">
+						<p>partner tecnico</p>
+						<a href="http://www.pedrali.it/it/" target="_blank">
+						<img src="img/PEDRALI.png" />
+						</a>
+					</div>
+					<div style="padding-top:1rem;" class="float">
+						<p></p>
+						<a href="http://www.prosecco.wine" target="_blank">
+						<img src="img/logo-prosecco.png" />
+						</a>
+					</div>
+					<div class="float">
+						<a href="http://www.birramenabrea.com/it/home" target="_blank">
+						<img id="menabrea" src="img/logoMenabrea-07.png" />
+						</a>
+					</div>
+					<div class="float">
+						<p>media partner</p>
+						<a href="http://zero.eu" target="_blank">
+						<img src="img/zero.png"/></a>
+					</div>
+					<div class="float">
+						<a href="http://www.pagina99.it" target="_blank">
+						<img id="pagina99" src="img/pagina99.png"/>
+					</div>
+					<div class="float">
+						<p>digital imaging partner</p>
+						<a href="http://www.canon.it" target="_blank">
+						<img id="canon" src="img/canon.png"/>
+						</a>
+					</div>
+<!-- 					<div class="clearfix"></div> -->
+			</div>
+
+			<div class="partners">
+				<div>
+					<img src="img/loghi bianchi-01.png" />
+				</div>
+			<a href="http://triennale.org" target="_blank">
+				<div>
+					<img src="img/loghi bianchi-02.png" />
+				</div>
+			</a>
+				<div class="clearfix"></div>
+			</div>
+	</div>
+
+
+<!-- 		<div class="one-third">
+			<div class="credits">
+				<p><a href="http://www.leftloft.com/"target="_blank">leftloft.com</a></p>
+			</div>
+		</div> -->
+		<div class="clearfix"></div>
+	</footer>
+
+
+<!-- scripts per jquery e analytics -->
+
+    <script type="text/javascript">
+      // Learnt and adapted from: http://tech.pro/tutorial/650/javascript-draggable-elements from a user comments post/code (@TheDesigner in 2009-ish).
+
+      // Global variables without any specified type (type will be determined when used in the functions below).
+      var obj, x, y, prev_x, prev_y;
+
+      function drag(e) {
+        // Yep, use the object I just clicked on.
+        obj = e.target;
+        // Set current X coordinate minus distance left from offsetParent node.
+        prev_x = x - obj.offsetLeft;
+        // Set current Y coordinate minus distance top from offsetParent node.
+        prev_y = y - obj.offsetTop;
+        // Change the object's color so it looks like it's usable/moveable.
+      }
+
+      function move(e) {
+        // Always track and record the mouse's current position.
+        if (e.pageX) {
+          x = e.pageX; // X coordinate based on page, not viewport.
+          y = e.pageY; // Y coordinate based on page, not viewport.
+        }
+      //  else if (e.clientX) {
+      //    x=clientX; // X coordinate based on viewport.
+      //    y=clientY; // Y coordinate based on viewport.
+      //  }
+
+        // If the object specifically is selected, then move it to the X/Y coordinates that are always being tracked.
+        if(obj) {
+          obj.style.left = (x - prev_x) + 'px';
+          obj.style.top = (y - prev_y) + 'px';
+        }
+      }
+
+      function drop() {
+        // Revert to the default css style.
+        // Remove the attached event from the element so it doesn't keep following your mouse. :)
+        obj = false;
+      }
+
+
+      // Make a specific element movable
+      document.getElementById('ws1').onmousedown = drag;
+      document.getElementById('ws2').onmousedown = drag;
+      document.getElementById('ws3').onmousedown = drag;
+      document.getElementById('ws4').onmousedown = drag;
+      document.getElementById('ws5').onmousedown = drag;
+      document.getElementById('ws6').onmousedown = drag;
+      document.getElementById('ws7').onmousedown = drag;
+      document.getElementById('ws8').onmousedown = drag;
+      document.onmousemove = move;
+      document.onmouseup = drop;
+
+    </script>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+	<script>
+	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	 ga('create', 'UA-76204370-1', 'auto');
+	 ga('send', 'pageview');
+	</script>
+
+</body>
+</html>
